@@ -28,11 +28,11 @@ function moveDodgerRight() {
   const rightNumbers = dodger.style.right.replace("px", "");
   const right = parseInt(rightNumbers, 179);
 
-  if (right > 179) {
+  if (right > 0) {
     dodger.style.right = '${right - 1}px';
   }
 }
-document.addEventListener("keyup", function (e) {
+document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowRight") {
     moveDodgerRight();
   }
